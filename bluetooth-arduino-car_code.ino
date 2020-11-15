@@ -10,9 +10,7 @@ char command;
 AF_DCMotor motor1(1); 
 AF_DCMotor motor2(2); 
 AF_DCMotor motor3(3);
-AF_DCMotor motor4(4);
-
-char command; 
+AF_DCMotor motor4(4); 
 
 void setup() 
 {       
@@ -21,7 +19,7 @@ void setup()
 
 void loop(){
   if(Serial.available() > 0){ 
-    command = Serial.read(); 
+    char command = Serial.read(); 
     Stop(); //initialize with motors stoped
     //Change pin mode only if new command is different from previous.   
     //Serial.println(command);
